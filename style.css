@@ -77,6 +77,7 @@ header nav .menu li a:hover:before {
 }
 
 header nav #toggle {
+    display: none;
     font-size: 1.3rem;
     margin-left: 80px;
     cursor: pointer;
@@ -180,6 +181,9 @@ header nav #toggle {
 
 
 @media (max-width:800px) {
+    header nav #toggle {
+        display: block;
+    }
     .home {
         min-width: 390px;
     }
