@@ -1,0 +1,244 @@
+@font-face {
+    font-family: YellowMegician;
+    src: url('fonts/YellowMagician.ttf');
+}
+@font-face {
+    font-family: KaushanScript;
+    src: url('fonts/KaushanScript-Regular.otf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    min-height: 100vh;
+    min-width: 400px;
+    overflow: hidden;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 80px;
+    width: 100%;
+    padding: 0 5%;
+    color: #311822;
+    font-size: 18px;
+}
+
+header .logo {
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-right: auto;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+}
+
+header nav .menu {
+    display: flex;
+    align-items: center;
+}
+
+header nav .menu li a {
+    position: relative;
+    color: #311822;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-left: 40px;
+    border-radius: 0.4rem;
+    transition: color 0.4s ease;
+}
+
+header nav .menu li a::before  {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: -2px;
+    width: 0;
+    height: 2px;
+    border-radius: 3px;
+    background-color: #770032;
+    transition: all 0.5s;
+}
+
+header nav .menu li a:hover:before {
+    width: 110%;
+}
+
+header nav #toggle {
+    font-size: 1.3rem;
+    margin-left: 80px;
+    cursor: pointer;
+}
+
+.home {
+    padding: 0 5%;
+    color: #311822;
+    text-align: center;
+}
+
+.home h1 {
+    font-family: 'YellowMegician';
+    text-transform: uppercase;
+    font-size: 6rem;
+    letter-spacing: 10px;
+}
+
+.home h2 {
+    font-family: 'KaushanScript';
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+
+.home .images .img1,
+.home .images .img2,
+.home .images .img3,
+.home .images .img4,
+.home .images .img5,
+.home .images .img6,
+.home .images .img7,
+.home .images .img8,
+.home .images .img9
+{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -10;
+}
+
+.home .images .img1 {
+    background: url('images/Background.png');
+    background-position: center;
+    background-size: contain;
+}
+
+.home .images .img2 {
+    background: url('images/Particles.png');
+    background-position: center;
+    background-size: contain;
+}
+
+.home .images .img3 {
+    background: url('images/Clouds.png');
+    background-position: left;
+    background-size: cover;
+    bottom: 10%;
+}
+
+.home .images .img4 {
+    background: url('images/Sun.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.home .images .img5 {
+    background: url('images/Taj\ Mahel.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.home .images .img6 {
+    background: url('images/Trees.png');
+    background-position: center;
+    background-size: contain;
+}
+
+.home .images .img7 {
+    background: url('images/Bottom\ border.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.home .images .img8 {
+    background: url('images/Sun\ glow.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.home .images .img9 {
+    background: url('images/Birds.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+@media (max-width:800px) {
+    .home {
+        min-width: 390px;
+    }
+    .home h1 {
+        margin-top: 5px;
+        font-size: 4rem;
+        font-weight: 700;
+    }
+    .home h2 {
+        margin-top: 10px;
+    }
+    header nav .menu {
+        flex-direction: column;
+        row-gap: 2rem;
+        position: absolute;
+        left: -100%;
+        top: 80px;
+        width: 100%;
+        padding-top: 110px;
+        background: #311822;
+        height: calc(100vh - 80px);
+        z-index: 10;
+        transition: left 0.4s ease;
+    }
+    header nav .menu.active{
+        left: 0;
+    }
+    header nav .menu li a {
+        margin-left: unset;
+        font-size: 2rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #f3de88;
+        width: 250px;
+        height: 60px;
+        padding: 13px 0;
+        padding-left: 5px;
+        display: block;
+        text-align: center;
+        border-radius: 5px;
+        transition: 0.25s ease;
+    }
+    header nav .menu li a::before  {
+        content: none;
+    }
+    header nav .menu li a:hover {
+        background-color: #f3de88;
+        color: #311822;
+    }
+    .home .images .img1,
+    .home .images .img2,
+    .home .images .img3,
+    .home .images .img4,
+    .home .images .img5,
+    .home .images .img6,
+    .home .images .img7,
+    .home .images .img8,
+    .home .images .img9 {
+        background-position: center;
+        background-size: cover;
+    }
+}
